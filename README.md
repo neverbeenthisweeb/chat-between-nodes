@@ -19,4 +19,28 @@ curl -X GET \
   'localhost:3000/node/1002/chats' \
   --header 'Accept: */*' \
   --header 'User-Agent: Thunder Client (https://www.thunderclient.com)'
+
+[
+  {
+    "id": "3",
+    "node_id": "1002",
+    "from": "Sandy",
+    "message": "Hi, anybody here?",
+    "timestamp": "2023-03-17T21:02:00+07:00"
+  },
+  {
+    "id": "4",
+    "node_id": "1002",
+    "from": "Larry",
+    "message": "Hi",
+    "timestamp": "2023-03-17T21:03:00+07:00"
+  },
+  {
+    "id": "5",
+    "node_id": "1002",
+    "from": "Larry",
+    "message": "HII!!! I AM HERE!",
+    "timestamp": "2023-03-17T21:04:00+07:00"
+  }
+]
 ```
