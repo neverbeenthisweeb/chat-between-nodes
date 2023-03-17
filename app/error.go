@@ -8,8 +8,8 @@ import (
 )
 
 var (
-	errChatNotFound  = errors.New("chat not found")
-	errMissingNodeID = errors.New("missing node ID")
+	ErrChatNotFound  = errors.New("chat not found")
+	ErrMissingNodeID = errors.New("missing node ID")
 )
 
 var FiberErrorHandler = func(c *fiber.Ctx, err error) error {
@@ -18,9 +18,9 @@ var FiberErrorHandler = func(c *fiber.Ctx, err error) error {
 	}
 
 	switch err {
-	case errChatNotFound:
+	case ErrChatNotFound:
 		return c.Status(http.StatusNotFound).SendString(err.Error())
-	case errMissingNodeID:
+	case ErrMissingNodeID:
 		return c.Status(http.StatusBadRequest).SendString(err.Error())
 	default:
 		return c.Status(http.StatusInternalServerError).SendString("something went wrong")
